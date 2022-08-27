@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    background: #FCD800;
+}
+
+h1 {
+    position: relative;
+    font-size: calc(16px + 6 * ((100vw - 28px) / 40));
+    color: #0059A9;
+    text-transform: uppercase;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #FCD800;
+    min-height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #0059A9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animate 8s linear infinite;
+
+}
+
+@keyframes animate {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
